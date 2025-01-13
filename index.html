@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Analysis & Systems Development</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(270deg, #1e88e5, #4fc3f7, #81d4fa, #ffffff);
+            background-size: 400% 400%;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            animation: backgroundAnimation 15s ease infinite;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 h2 {
+            font-size: 3rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #f7f7f7;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .profile {
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .profile:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #1e88e5;
+            margin-bottom: 15px;
+        }
+
+        .profile h2 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .profile p {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .description {
+            flex: 2;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        .description h3 {
+            font-size: 2rem;
+            color: #1e88e5;
+            margin-bottom: 20px;
+        }
+
+        .description p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px 0;
+            background: #1e88e5;
+            color: #fff;
+            border-radius: 15px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ddd;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile, .description {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Statistical Analysis & Systems Development</h3>
+        <p>Empowering your data-driven decisions with advanced online and offline solutions</p>
+    </header>
+
+    <div class="container">
+        <!-- Julius Msangi Profile -->
+        <div class="profile">
+            <img src="m2.webp" alt="Julius Msangi">
+            <h2>Julius Msangi</h2>
+            <p>Expert in Web-Based Systems Development and Integration   🌍</p>
+        </div>
+
+        <!-- Services Description -->
+        <div class="description">
+            <h3>Why Work With Us?</h3>
+            <p>
+                We specialize in providing top-notch statistical analysis and custom web-based systems 
+                to meet your business needs. With innovative tools and professional expertise, we bridge 
+                the gap between data analysis and system implementation. Whether you're online or offline, 
+                our solutions are designed to deliver.
+            </p>
+        </div>
+
+        <!-- Steve Mlogolo Profile -->
+        <div class="profile">
+            <img src="m1.jpg" alt="Steve Mlogolo">
+            <h2>Steven Mlogolo</h2>
+            <p>Specialist in Statistical Modeling and Advanced Data Analytics📶</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact Us</p>
+        <a href="https://wa.me/your-number" target="_blank">WhatsApp</a>
+        <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+        <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+        <p>&copy; 2025 Statistical Analysis Services</p>
+    </footer>
+
+    <script>
+        // Interactive Background Effect
+        document.addEventListener('mousemove', (event) => {
+            const x = (event.clientX / window.innerWidth) * 100;
+            const y = (event.clientY / window.innerHeight) * 100;
+            document.body.style.backgroundPosition = `${x}% ${y}%`;
+        });
+
+        // Profile hover effects
+        const profiles = document.querySelectorAll('.profile');
+        profiles.forEach(profile => {
+            profile.addEventListener('mouseenter', () => {
+                profile.style.transform = 'translateY(-10px) scale(1.05)';
+            });
+
+            profile.addEventListener('mouseleave', () => {
+                profile.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Fade-in effect on page load
+        window.addEventListener('load', () => {
+            const description = document.querySelector('.description');
+            description.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
